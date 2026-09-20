@@ -1,0 +1,4 @@
+# Working files that should not be published
+.claude/
+portfolio/
+prompt-portfolio
