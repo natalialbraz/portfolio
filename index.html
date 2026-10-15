@@ -85,6 +85,7 @@
           meta: "ANDROID • KOTLIN • 2024–2026",
           description: "A marketplace that connects family farmers and consumers of organic food across Brazil.",
           image: "img/hortipure-2-search.jpg",
+          icon: "img/hortipure-icon.png",
           year: "2024 — Present",
           role: "Solo developer (app and backend)",
           stack: ["Kotlin", "Jetpack Compose", "Navigation Compose", "Koin", "Retrofit", "Coil", "Firebase Auth", "Crashlytics", "FastAPI", "PostgreSQL"],
@@ -120,6 +121,7 @@
         solutionLabel: "The solution",
         highlightsLabel: "Highlights",
         screenshotsLabel: "Screens",
+        getItOnGooglePlay: "Get it on Google Play",
         roleLabel: "Role",
         yearLabel: "Year",
         stackLabel: "Stack",
@@ -647,6 +649,45 @@
     margin-bottom: 48px;
   }
 
+  .play-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--color-accent);
+    color: #0c1d1b;
+    padding: 12px 22px 12px 14px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .play-badge:hover,
+  .play-badge:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -12px rgba(0,0,0,0.35);
+  }
+  .play-badge-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+  .play-badge-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .play-badge-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+  .play-badge-label {
+    font-family: var(--font-serif);
+    font-size: 19px;
+    font-weight: 700;
+  }
+
   .detail-block { margin-bottom: 40px; max-width: 62ch; }
   .detail-block .section-label { margin-bottom: 12px; color: var(--color-text-secondary); }
   .detail-block p { color: var(--color-text-secondary); }
@@ -1114,6 +1155,18 @@
       main.appendChild(el("span", { class: "section-label", text: p.meta }));
       main.appendChild(el("h1", { class: "detail-title", text: p.title, attrs: { id: "detailTitle", tabindex: "-1" } }));
       main.appendChild(el("p", { class: "detail-lead", text: p.overview }));
+
+      var playLink = p.links && p.links.find(function (l) { return l.href.indexOf("play.google.com") >= 0; });
+      if (playLink) {
+        var badge = el("a", { class: "play-badge", attrs: { href: playLink.href, target: "_blank", rel: "noopener" } });
+        if (p.icon) badge.appendChild(el("img", { class: "play-badge-icon", attrs: { src: p.icon, alt: "", loading: "lazy", width: "48", height: "48" } }));
+        var badgeText = el("span", { class: "play-badge-text" });
+        badgeText.appendChild(el("span", { class: "play-badge-eyebrow", text: D.getItOnGooglePlay }));
+        badgeText.appendChild(el("span", { class: "play-badge-label", text: playLink.label + " ↗" }));
+        badge.appendChild(badgeText);
+        main.appendChild(badge);
+      }
+
       if (p.audience) main.appendChild(textBlock(D.audienceLabel, p.audience));
       if (p.benefits) main.appendChild(textBlock(D.benefitsLabel, p.benefits));
       main.appendChild(textBlock(D.challengeLabel, p.challenge));
@@ -1136,9 +1189,10 @@
         p.stack.forEach(function (s) { stackList.appendChild(el("li", { text: s })); });
         meta.appendChild(metaBlock(D.stackLabel, stackList));
       }
-      if (p.links && p.links.length) {
+      var sidebarLinks = p.links ? p.links.filter(function (l) { return l !== playLink; }) : [];
+      if (sidebarLinks.length) {
         var linkList = el("ul");
-        p.links.forEach(function (l) {
+        sidebarLinks.forEach(function (l) {
           var li = el("li");
           li.appendChild(el("a", { text: l.label + " ↗", attrs: { href: l.href, target: "_blank", rel: "noopener" } }));
           linkList.appendChild(li);
