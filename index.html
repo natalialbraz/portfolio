@@ -3,166 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Natália Braz — Android Developer</title>
+<title>Natália Braz — Android Engineer</title>
 <meta name="description" content="Natália Braz — Android engineer with 4 years of experience building Kotlin and Jetpack Compose apps for international clients.">
+<link rel="canonical" href="https://natalialbraz.github.io/portfolio/">
+
+<!-- Open Graph / Twitter Card: so LinkedIn, Slack, email, etc. show a real preview card.
+     These need to stay as plain static tags — a link-preview bot does not run JavaScript. -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://natalialbraz.github.io/portfolio/">
+<meta property="og:title" content="Natália Braz — Android Engineer">
+<meta property="og:description" content="Android engineer with 4 years of experience building Kotlin and Jetpack Compose apps for international clients.">
+<meta property="og:image" content="https://natalialbraz.github.io/portfolio/img/natalia.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Natália Braz — Android Engineer">
+<meta name="twitter:description" content="Android engineer with 4 years of experience building Kotlin and Jetpack Compose apps for international clients.">
+<meta name="twitter:image" content="https://natalialbraz.github.io/portfolio/img/natalia.jpg">
 
 <!--
   ============================================================
-  CONFIG — edit everything below to update the site's content.
-  You should not need to touch anything past the closing
-  </script> tag (the "STRUCTURE" comment) just to change text.
+  CONTENT — edit the text directly in the HTML below, in place.
+  Each section is labeled with a comment (HERO, ABOUT, EXPERIENCE,
+  PROJECTS, SKILLS, CONTACT, FOOTER). This is the real page
+  content, visible with no JavaScript required, which matters for
+  link previews (LinkedIn, Slack, email) and search engines.
+
+  The only JavaScript-driven content left is the HortiPure project
+  DETAIL page (opens at #/project/hortipure) — its text lives in
+  the small PROJECTS script near the end of <head>, since that
+  "page" only exists inside this one file.
   ============================================================
 -->
 <script>
-  window.SITE = {
-    name: "Natália Braz",
-    role: "Android Engineer",
-    pitch: "Mobile Development — Android | Kotlin · 3.5+ years · International projects",
-
-    nav: [
-      { label: "About", href: "#about" },
-      { label: "Experience", href: "#experience" },
-      { label: "Projects", href: "#projects" },
-      { label: "Skills", href: "#skills" },
-      { label: "Contact", href: "#contact" }
-    ],
-
-    hero: {
-      label: "Mobile Development",
-      heading: "Natália Braz",
-      photo: "img/natalia.jpg",
-      photoAlt: "Natália Braz smiling by the River Thames, with the London Eye behind her",
-      subheading: "Android Engineer · Kotlin · Jetpack Compose",
-      pitch: "4 years building production Android apps for international clients. Based in Belo Horizonte, Brazil, and open to relocation and remote work.",
-      ctaPrimary: { label: "View Work", href: "#projects" },
-      ctaSecondary: { label: "Get in Touch", href: "#contact" }
-    },
-
-    about: {
-      label: "About",
-      heading: "Building Android apps with care since 2022.",
-      paragraphs: [
-        "I'm an Android engineer from Brazil with 4 years of experience shipping Kotlin and Jetpack Compose apps for international clients, working in a consultancy where I learned to get productive fast in new teams and codebases.",
-        "I like the work around the feature too: modernizing legacy code, setting up testing, improving how teams run their sprints, and mentoring junior developers. I also use AI-assisted workflows in my daily development.",
-        "I studied Control and Automation Engineering at UFOP. My thesis, HortiPure, started as a small Android app and grew into a full product that I still build today."
-      ]
-    },
-
-    experience: {
-      label: "Experience",
-      heading: "Where I've worked.",
-      items: [
-        {
-          role: "Mobile Engineer (Android)",
-          company: "dti digital · Belo Horizonte, Brazil",
-          period: "Mar 2024 — Apr 2026",
-          description: "Worked on Android apps for US clients (Potbelly, Robert Half, Empower). Triaged crashes and ANRs with Crashlytics, refactored legacy code to Koin so it could be unit-tested, helped move a UI from XML to Jetpack Compose, and mentored interns."
-        },
-        {
-          role: "Mobile Engineer Intern (Android)",
-          company: "dti digital · Belo Horizonte, Brazil",
-          period: "Jul 2022 — Mar 2024",
-          description: "Built the first UI unit-test setup for Bloomin' Brands' apps, contributed to the white-label architecture behind the Carrabba's and Bonefish Grill apps, and added in-app payments with the OloPay SDK."
-        }
-      ]
-    },
-
-    projects: {
-      label: "Selected Work",
-      heading: "Projects.",
-      /*
-        Each project has a card (title, meta, description, image) AND a detail
-        page that opens at index.html#/project/<slug>.
-        - slug: unique, lowercase, dashes only (it becomes part of the URL)
-        - image / screenshots: paths to portrait phone screenshots, e.g. "img/app-1.jpg".
-          Leave "" to show a placeholder.
-        - links: optional buttons on the detail page (remove the array items you don't need)
-      */
-      items: [
-        {
-          slug: "hortipure",
-          title: "HortiPure",
-          meta: "ANDROID • KOTLIN • 2024–2026",
-          description: "A marketplace that connects family farmers and consumers of organic food across Brazil.",
-          image: "img/hortipure-2-search.jpg",
-          icon: "img/hortipure-icon.png",
-          year: "2024 — Present",
-          role: "Solo developer (app and backend)",
-          stack: ["Kotlin", "Jetpack Compose", "Navigation Compose", "Koin", "Retrofit", "Coil", "Firebase Auth", "Crashlytics", "FastAPI", "PostgreSQL"],
-          overview: "HortiPure helps family farmers who grow without pesticides sell directly to consumers near them. Consumers find markets and products on a map, and producers manage their own catalog.",
-          audience: "Two groups in Brazil: small family farmers who want to sell their harvest and reach more customers without a storefront or commission fees, and people who buy fresh produce regularly and prefer organic but struggle to find local growers selling directly.",
-          benefits: "Shoppers find local growers selling fresh, often organic produce directly, with fewer pesticides and clearer provenance than supermarket food. Farmers get visibility they would not otherwise have, selling straight to customers with no commission or middlemen taking a share of the price.",
-          challenge: "Heavy pesticide use in Brazilian agribusiness is a food-safety concern, while agroecological family farmers often struggle to reach buyers. The app started as my engineering thesis at UFOP in 2024, focused on the city of Ouro Preto. I kept building it, and it now serves all of Brazil.",
-          solution: "A native Android app with two separate journeys. Consumers browse markets and products, search by location and save favorites. Producers register their establishment and manage products. I also built the backend REST API, using Firebase Authentication together with JWT authorization.",
-          highlights: [
-            "One app, two journeys: one for consumers and one for producers",
-            "Location-based search on a map, with direct contact by phone or WhatsApp",
-            "Full stack: Kotlin and Compose on the app, FastAPI and PostgreSQL on the backend",
-            "Rebuilt from XML to Jetpack Compose and published on Google Play, with Crashlytics for crash reporting"
-          ],
-          screenshots: [
-            "img/hortipure-1-home.jpg",
-            "img/hortipure-2-search.jpg",
-            "img/hortipure-3-producer.jpg",
-            "img/hortipure-4-products.jpg"
-          ],
-          links: [
-            { label: "View on Google Play", href: "https://play.google.com/store/apps/details?id=com.hortipure.app" }
-          ]
-        }
+  // Data for project DETAIL pages only (index.html#/project/<slug>).
+  // The project CARD on the homepage is plain HTML further down —
+  // edit that directly. Add a new project by duplicating one of
+  // these objects *and* duplicating a project-card block in the
+  // PROJECTS section of the HTML.
+  window.PROJECTS = [
+    {
+      slug: "hortipure",
+      title: "HortiPure",
+      meta: "ANDROID • KOTLIN • 2024–2026",
+      icon: "img/hortipure-icon.png",
+      year: "2024 — Present",
+      role: "Solo developer (app and backend)",
+      stack: ["Kotlin", "Jetpack Compose", "Navigation Compose", "Koin", "Retrofit", "Coil", "Firebase Auth", "Crashlytics", "FastAPI", "PostgreSQL"],
+      overview: "HortiPure helps family farmers who grow without pesticides sell directly to consumers near them. Consumers find markets and products on a map, and producers manage their own catalog.",
+      audience: "Two groups in Brazil: small family farmers who want to sell their harvest and reach more customers without a storefront or commission fees, and people who buy fresh produce regularly and prefer organic but struggle to find local growers selling directly.",
+      benefits: "Shoppers find local growers selling fresh, often organic produce directly, with fewer pesticides and clearer provenance than supermarket food. Farmers get visibility they would not otherwise have, selling straight to customers with no commission or middlemen taking a share of the price.",
+      challenge: "Heavy pesticide use in Brazilian agribusiness is a food-safety concern, while agroecological family farmers often struggle to reach buyers. The app started as my engineering thesis at UFOP in 2024, focused on the city of Ouro Preto. I kept building it, and it now serves all of Brazil.",
+      solution: "A native Android app with two separate journeys. Consumers browse markets and products, search by location and save favorites. Producers register their establishment and manage products. I also built the backend REST API, using Firebase Authentication together with JWT authorization.",
+      highlights: [
+        "One app, two journeys: one for consumers and one for producers",
+        "Location-based search on a map, with direct contact by phone or WhatsApp",
+        "Full stack: Kotlin and Compose on the app, FastAPI and PostgreSQL on the backend",
+        "Rebuilt from XML to Jetpack Compose and published on Google Play, with Crashlytics for crash reporting"
       ],
-      detail: {
-        backLabel: "Back to all projects",
-        nextLabel: "Next project",
-        overviewLabel: "Overview",
-        audienceLabel: "Who it's for",
-        benefitsLabel: "What it offers",
-        challengeLabel: "The challenge",
-        solutionLabel: "The solution",
-        highlightsLabel: "Highlights",
-        screenshotsLabel: "Screens",
-        getItOnGooglePlay: "Get it on Google Play",
-        roleLabel: "Role",
-        yearLabel: "Year",
-        stackLabel: "Stack",
-        linksLabel: "Links"
-      }
-    },
-
-    skills: {
-      label: "Skills",
-      heading: "What I work with.",
-      groups: [
-        {
-          number: "01",
-          title: "Languages",
-          description: "Kotlin as my main language, and Python for backend work."
-        },
-        {
-          number: "02",
-          title: "Android",
-          description: "Jetpack Compose, XML Views, Coroutines and Flow, MVVM, Clean Architecture, Koin, Hilt, Retrofit, Room, Firebase."
-        },
-        {
-          number: "03",
-          title: "Quality & Tools",
-          description: "JUnit, MockK, Turbine, Crashlytics, Sentry, Amplitude, Git, Jira, Azure DevOps, and AI-assisted development with Copilot, Claude and Cursor."
-        }
+      screenshots: [
+        "img/hortipure-1-home.jpg",
+        "img/hortipure-2-search.jpg",
+        "img/hortipure-3-producer.jpg",
+        "img/hortipure-4-products.jpg"
+      ],
+      links: [
+        { label: "View on Google Play", href: "https://play.google.com/store/apps/details?id=com.hortipure.app" }
       ]
-    },
-
-    contact: {
-      label: "Contact",
-      heading: "Let's work together.",
-      description: "I'm open to Android roles, including relocation and remote work. Email is the fastest way to reach me.",
-      email: "natalialuizabraz@gmail.com",
-      github: "https://github.com/natalialbraz",
-      linkedin: "https://www.linkedin.com/in/natalia-luiza-braz"
-    },
-
-    footer: {
-      description: "Android engineer building reliable apps with Kotlin and Jetpack Compose."
     }
+  ];
+
+  window.DETAIL_LABELS = {
+    backLabel: "Back to all projects",
+    nextLabel: "Next project",
+    audienceLabel: "Who it's for",
+    benefitsLabel: "What it offers",
+    challengeLabel: "The challenge",
+    solutionLabel: "The solution",
+    highlightsLabel: "Highlights",
+    screenshotsLabel: "Screens",
+    getItOnGooglePlay: "Get it on Google Play",
+    roleLabel: "Role",
+    yearLabel: "Year",
+    stackLabel: "Stack",
+    linksLabel: "Links"
   };
 </script>
 
@@ -251,19 +173,11 @@
 
   section.alt-bg { background: var(--color-bg-alt); }
 
-  /* Fade-in on scroll */
+  /* Fade-in on scroll: content is visible by default (no JS needed).
+     JS only ADDS the hidden starting state (see bottom script), so a
+     page with JS disabled or blocked never has invisible content. */
   .fade-in {
-    opacity: 0;
-    transform: translateY(16px);
     transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .fade-in.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .fade-in { opacity: 1; transform: none; transition: none; }
-    html { scroll-behavior: auto; }
   }
 
   /* ===========================================================
@@ -461,10 +375,6 @@
     font-size: 19px;
   }
 
-  @media (max-width: 760px) {
-    .about-body { grid-template-columns: 1fr; }
-  }
-
   /* ===========================================================
      EXPERIENCE
      =========================================================== */
@@ -529,6 +439,12 @@
     flex-direction: column;
   }
 
+  .project-card-link {
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+  }
+
   .project-frame {
     position: relative;
     aspect-ratio: 9 / 19.5;
@@ -541,7 +457,8 @@
     box-shadow: 0 20px 40px -20px rgba(0,0,0,0.25);
     transition: transform 0.3s ease;
   }
-  .project-card:hover .project-frame { transform: translateY(-6px); }
+  .project-card-link:hover .project-frame,
+  .project-card-link:focus-visible .project-frame { transform: translateY(-6px); }
 
   .project-frame img {
     width: 100%;
@@ -574,7 +491,10 @@
     font-size: 22px;
     margin-bottom: 6px;
     text-align: center;
+    transition: color 0.2s ease;
   }
+  .project-card-link:hover .project-title,
+  .project-card-link:focus-visible .project-title { color: var(--color-accent-text); }
 
   .project-meta {
     font-size: 12px;
@@ -591,10 +511,18 @@
     text-align: center;
   }
 
-  .project-cta {
-    display: block;
+  .project-card-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 24px;
     margin-top: 14px;
-    text-align: center;
+  }
+
+  .project-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     font-size: 14px;
     font-weight: 600;
     color: var(--color-accent-text);
@@ -603,10 +531,8 @@
     display: inline-block;
     transition: transform 0.2s ease;
   }
-  .project-card:hover .project-cta span,
-  .project-card:focus-visible .project-cta span { transform: translateX(4px); }
-  .project-card:hover .project-title { color: var(--color-accent-text); }
-  .project-title { transition: color 0.2s ease; }
+  .project-cta:hover span,
+  .project-cta:focus-visible span { transform: translateX(4px); }
 
   /* ===========================================================
      PROJECT DETAIL PAGE
@@ -735,7 +661,6 @@
     gap: 40px 32px;
   }
   .detail-screens-grid .project-frame { margin: 0 auto; width: 100%; }
-  .detail-screens-grid .project-card:hover .project-frame { transform: none; }
 
   .detail-next {
     display: flex;
@@ -913,16 +838,9 @@
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- ===========================================================
-     STRUCTURE — generally you shouldn't need to edit markup
-     below, just the SITE object above. Everything text-based is
-     rendered dynamically via renderSite() at the bottom of the
-     page.
-     =========================================================== -->
-
 <header class="site-header">
   <div class="container">
-    <a href="#top" class="logo" id="logo"></a>
+    <a href="#top" class="logo">Natália Braz</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="siteNav">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -930,63 +848,134 @@
         <line x1="3" y1="18" x2="21" y2="18"></line>
       </svg>
     </button>
-    <nav class="site-nav" id="siteNav" aria-label="Primary"></nav>
+    <nav class="site-nav" id="siteNav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
 </header>
 
 <main id="main">
 
+  <!-- HERO -->
   <section class="hero" id="top">
     <div class="container">
       <div>
-        <span class="section-label" id="heroLabel"></span>
-        <h1 class="hero-heading" id="heroHeading"></h1>
-        <p class="hero-role" id="heroRole"></p>
-        <p class="hero-pitch" id="heroPitch"></p>
-        <div class="hero-ctas" id="heroCtas"></div>
+        <span class="section-label">Mobile Development</span>
+        <h1 class="hero-heading">Natália Braz</h1>
+        <p class="hero-role">Android Engineer · Kotlin · Jetpack Compose</p>
+        <p class="hero-pitch">4 years building production Android apps for international clients. Based in Belo Horizonte, Brazil, and open to relocation and remote work.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#projects">View Work</a>
+          <a class="btn btn-link" href="#contact">Get in Touch</a>
+        </div>
       </div>
-      <img class="hero-photo" id="heroPhoto" alt="" width="800" height="1067" fetchpriority="high">
+      <img class="hero-photo" src="img/natalia.jpg" alt="Natália Braz smiling by the River Thames, with the London Eye behind her" width="800" height="1067" fetchpriority="high">
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about" class="fade-in">
     <div class="container">
-      <span class="section-label" id="aboutLabel"></span>
-      <h2 class="about-heading" id="aboutHeading"></h2>
-      <div class="about-body" id="aboutBody"></div>
+      <span class="section-label">About</span>
+      <h2 class="about-heading">Building Android apps with care since 2022.</h2>
+      <div class="about-body">
+        <p>I'm an Android engineer from Brazil with 4 years of experience shipping Kotlin and Jetpack Compose apps for international clients, working in a consultancy where I learned to get productive fast in new teams and codebases.</p>
+        <p>I like the work around the feature too: modernizing legacy code, setting up testing, improving how teams run their sprints, and mentoring junior developers. I also use AI-assisted workflows in my daily development.</p>
+        <p>I studied Control and Automation Engineering at UFOP. My thesis, HortiPure, started as a small Android app and grew into a full product that I still build today.</p>
+      </div>
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
   <section id="experience" class="alt-bg fade-in">
     <div class="container">
-      <span class="section-label" id="experienceLabel"></span>
-      <h2 class="section-heading" id="experienceHeading"></h2>
-      <div class="experience-list" id="experienceList"></div>
+      <span class="section-label">Experience</span>
+      <h2 class="section-heading">Where I've worked.</h2>
+      <div class="experience-list">
+        <div class="experience-item">
+          <div class="experience-period">Mar 2024 — Apr 2026</div>
+          <div>
+            <h3 class="experience-role">Mobile Engineer (Android)</h3>
+            <div class="experience-company">dti digital · Belo Horizonte, Brazil</div>
+            <p class="experience-description">Worked on Android apps for US clients (Potbelly, Robert Half, Empower). Triaged crashes and ANRs with Crashlytics, refactored legacy code to Koin so it could be unit-tested, helped move a UI from XML to Jetpack Compose, and mentored interns.</p>
+          </div>
+        </div>
+        <div class="experience-item">
+          <div class="experience-period">Jul 2022 — Mar 2024</div>
+          <div>
+            <h3 class="experience-role">Mobile Engineer Intern (Android)</h3>
+            <div class="experience-company">dti digital · Belo Horizonte, Brazil</div>
+            <p class="experience-description">Built the first UI unit-test setup for Bloomin' Brands' apps, contributed to the white-label architecture behind the Carrabba's and Bonefish Grill apps, and added in-app payments with the OloPay SDK.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- PROJECTS (homepage cards — static. The detail page is JS-rendered; see PROJECTS in <head>.) -->
   <section id="projects" class="fade-in">
     <div class="container">
-      <span class="section-label" id="projectsLabel"></span>
-      <h2 class="section-heading" id="projectsHeading"></h2>
-      <div class="project-grid" id="projectGrid"></div>
+      <span class="section-label">Selected Work</span>
+      <h2 class="section-heading">Projects.</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <a class="project-card-link" href="#/project/hortipure" aria-label="View HortiPure project details">
+            <div class="project-frame">
+              <img src="img/hortipure-2-search.jpg" alt="HortiPure app screenshot" loading="lazy">
+            </div>
+            <h3 class="project-title">HortiPure</h3>
+            <div class="project-meta">ANDROID • KOTLIN • 2024–2026</div>
+          </a>
+          <p class="project-description">A marketplace that connects family farmers and consumers of organic food across Brazil.</p>
+          <div class="project-card-actions">
+            <a class="project-cta" href="#/project/hortipure">View details <span aria-hidden="true">→</span></a>
+            <a class="project-cta" href="https://play.google.com/store/apps/details?id=com.hortipure.app" target="_blank" rel="noopener">Google Play <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
+  <!-- SKILLS -->
   <section id="skills" class="alt-bg fade-in">
     <div class="container">
-      <span class="section-label" id="skillsLabel"></span>
-      <h2 class="section-heading" id="skillsHeading"></h2>
-      <div class="skills-grid" id="skillsGrid"></div>
+      <span class="section-label">Skills</span>
+      <h2 class="section-heading">What I work with.</h2>
+      <div class="skills-grid">
+        <div>
+          <span class="skill-number">01</span>
+          <h3 class="skill-title">Languages</h3>
+          <p class="skill-description">Kotlin as my main language, and Python for backend work.</p>
+        </div>
+        <div>
+          <span class="skill-number">02</span>
+          <h3 class="skill-title">Android</h3>
+          <p class="skill-description">Jetpack Compose, XML Views, Coroutines and Flow, MVVM, Clean Architecture, Koin, Hilt, Retrofit, Room, Firebase.</p>
+        </div>
+        <div>
+          <span class="skill-number">03</span>
+          <h3 class="skill-title">Quality &amp; Tools</h3>
+          <p class="skill-description">JUnit, MockK, Turbine, Crashlytics, Sentry, Amplitude, Git, Jira, Azure DevOps, and AI-assisted development with Copilot, Claude and Cursor.</p>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" class="fade-in">
     <div class="container">
-      <span class="section-label" id="contactLabel"></span>
-      <h2 class="contact-heading" id="contactHeading"></h2>
-      <p class="contact-description" id="contactDescription"></p>
-      <div class="contact-links" id="contactLinks"></div>
+      <span class="section-label">Contact</span>
+      <h2 class="contact-heading">Let's work together.</h2>
+      <p class="contact-description">I'm open to Android roles, including relocation and remote work. Email is the fastest way to reach me.</p>
+      <div class="contact-links">
+        <a href="mailto:natalialuizabraz@gmail.com">natalialuizabraz@gmail.com</a>
+        <a href="https://github.com/natalialbraz" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/natalia-luiza-braz" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
   </section>
 
@@ -997,30 +986,39 @@
   <div class="container detail" id="detailContent"></div>
 </main>
 
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-name" id="footerName"></div>
-        <p class="footer-description" id="footerDescription"></p>
+        <div class="footer-name">Natália Braz</div>
+        <p class="footer-description">Android engineer building reliable apps with Kotlin and Jetpack Compose.</p>
       </div>
       <div>
         <div class="footer-heading">Navigation</div>
-        <ul class="footer-links" id="footerNav"></ul>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
       <div>
         <div class="footer-heading">Connect</div>
-        <ul class="footer-links" id="footerConnect"></ul>
+        <ul class="footer-links">
+          <li><a href="mailto:natalialuizabraz@gmail.com">Email</a></li>
+          <li><a href="https://github.com/natalialbraz" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/natalia-luiza-braz" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom" id="footerBottom"></div>
+    <div class="footer-bottom" id="footerBottom">© 2026 Natália Braz. All rights reserved.</div>
   </div>
 </footer>
 
 <script>
-  (function renderSite() {
-    var S = window.SITE;
-
+  (function () {
     function el(tag, opts) {
       opts = opts || {};
       var node = document.createElement(tag);
@@ -1033,71 +1031,19 @@
       return node;
     }
 
-    // --- Header / nav ---
-    document.getElementById("logo").textContent = S.name;
-    document.title = S.name + " — " + S.role;
+    // Keep the footer's copyright year correct without hiding any content behind JS.
+    document.getElementById("footerBottom").textContent =
+      "© " + new Date().getFullYear() + " Natália Braz. All rights reserved.";
 
+    // --- Project detail view (hash router: #/project/<slug>) ---
+    var PROJECTS = window.PROJECTS;
+    var D = window.DETAIL_LABELS;
     var navEl = document.getElementById("siteNav");
-    S.nav.forEach(function (item) {
-      var a = el("a", { text: item.label, attrs: { href: item.href } });
-      navEl.appendChild(a);
-    });
+    var homeEl = document.getElementById("main");
+    var detailEl = document.getElementById("detailMain");
+    var detailContent = document.getElementById("detailContent");
+    var homeTitle = document.title;
 
-    var footerNavEl = document.getElementById("footerNav");
-    S.nav.forEach(function (item) {
-      var li = el("li");
-      li.appendChild(el("a", { text: item.label, attrs: { href: item.href } }));
-      footerNavEl.appendChild(li);
-    });
-
-    // --- Hero ---
-    document.getElementById("heroLabel").textContent = S.hero.label;
-    document.getElementById("heroHeading").textContent = S.hero.heading;
-    document.getElementById("heroRole").textContent = S.hero.subheading;
-    document.getElementById("heroPitch").textContent = S.hero.pitch;
-    var heroPhoto = document.getElementById("heroPhoto");
-    heroPhoto.src = S.hero.photo;
-    heroPhoto.alt = S.hero.photoAlt;
-
-    var ctas = document.getElementById("heroCtas");
-    ctas.appendChild(el("a", {
-      class: "btn btn-primary",
-      text: S.hero.ctaPrimary.label,
-      attrs: { href: S.hero.ctaPrimary.href }
-    }));
-    ctas.appendChild(el("a", {
-      class: "btn btn-link",
-      text: S.hero.ctaSecondary.label,
-      attrs: { href: S.hero.ctaSecondary.href }
-    }));
-
-    // --- About ---
-    document.getElementById("aboutLabel").textContent = S.about.label;
-    document.getElementById("aboutHeading").textContent = S.about.heading;
-    var aboutBody = document.getElementById("aboutBody");
-    S.about.paragraphs.forEach(function (text) {
-      aboutBody.appendChild(el("p", { text: text }));
-    });
-
-    // --- Experience ---
-    document.getElementById("experienceLabel").textContent = S.experience.label;
-    document.getElementById("experienceHeading").textContent = S.experience.heading;
-    var expList = document.getElementById("experienceList");
-    S.experience.items.forEach(function (item) {
-      var row = el("div", { class: "experience-item" });
-      row.appendChild(el("div", { class: "experience-period", text: item.period }));
-      var right = el("div");
-      right.appendChild(el("h3", { class: "experience-role", text: item.role }));
-      right.appendChild(el("div", { class: "experience-company", text: item.company }));
-      right.appendChild(el("p", { class: "experience-description", text: item.description }));
-      row.appendChild(right);
-      expList.appendChild(row);
-    });
-
-    // --- Projects ---
-    document.getElementById("projectsLabel").textContent = S.projects.label;
-    document.getElementById("projectsHeading").textContent = S.projects.heading;
-    var grid = document.getElementById("projectGrid");
     function phoneFrame(src, alt) {
       var frame = el("div", { class: "project-frame" });
       if (src) {
@@ -1107,23 +1053,6 @@
       }
       return frame;
     }
-
-    S.projects.items.forEach(function (item) {
-      var card = el("a", { class: "project-card", attrs: { href: "#/project/" + item.slug } });
-      card.appendChild(phoneFrame(item.image, item.title + " screenshot"));
-      card.appendChild(el("h3", { class: "project-title", text: item.title }));
-      card.appendChild(el("div", { class: "project-meta", text: item.meta }));
-      card.appendChild(el("p", { class: "project-description", text: item.description }));
-      card.appendChild(el("span", { class: "project-cta", html: "View details <span aria-hidden=\"true\">→</span>" }));
-      grid.appendChild(card);
-    });
-
-    // --- Project detail view (hash router: #/project/<slug>) ---
-    var homeEl = document.getElementById("main");
-    var detailEl = document.getElementById("detailMain");
-    var detailContent = document.getElementById("detailContent");
-    var D = S.projects.detail;
-    var homeTitle = S.name + " — " + S.role;
 
     function metaBlock(label, valueNode) {
       var wrap = el("div");
@@ -1140,8 +1069,8 @@
     }
 
     function renderProject(index) {
-      var p = S.projects.items[index];
-      var next = S.projects.items[(index + 1) % S.projects.items.length];
+      var p = PROJECTS[index];
+      var next = PROJECTS[(index + 1) % PROJECTS.length];
       detailContent.textContent = "";
 
       var back = el("a", { class: "back-link", attrs: { href: "#projects" } });
@@ -1223,7 +1152,7 @@
         detailContent.appendChild(nextLink);
       }
 
-      document.title = p.title + " — " + S.name;
+      document.title = p.title + " — Natália Braz";
     }
 
     var currentView = "home";
@@ -1232,7 +1161,7 @@
       var match = location.hash.match(/^#\/project\/([\w-]+)$/);
       var index = -1;
       if (match) {
-        S.projects.items.forEach(function (p, i) { if (p.slug === match[1]) index = i; });
+        PROJECTS.forEach(function (p, i) { if (p.slug === match[1]) index = i; });
       }
 
       if (index >= 0) {
@@ -1260,42 +1189,6 @@
     window.addEventListener("hashchange", route);
     route();
 
-    // --- Skills ---
-    document.getElementById("skillsLabel").textContent = S.skills.label;
-    document.getElementById("skillsHeading").textContent = S.skills.heading;
-    var skillsGrid = document.getElementById("skillsGrid");
-    S.skills.groups.forEach(function (group) {
-      var col = el("div");
-      col.appendChild(el("span", { class: "skill-number", text: group.number }));
-      col.appendChild(el("h3", { class: "skill-title", text: group.title }));
-      col.appendChild(el("p", { class: "skill-description", text: group.description }));
-      skillsGrid.appendChild(col);
-    });
-
-    // --- Contact ---
-    document.getElementById("contactLabel").textContent = S.contact.label;
-    document.getElementById("contactHeading").textContent = S.contact.heading;
-    document.getElementById("contactDescription").textContent = S.contact.description;
-    var contactLinks = document.getElementById("contactLinks");
-    contactLinks.appendChild(el("a", { text: S.contact.email, attrs: { href: "mailto:" + S.contact.email } }));
-    contactLinks.appendChild(el("a", { text: "GitHub", attrs: { href: S.contact.github, target: "_blank", rel: "noopener" } }));
-    contactLinks.appendChild(el("a", { text: "LinkedIn", attrs: { href: S.contact.linkedin, target: "_blank", rel: "noopener" } }));
-
-    // --- Footer ---
-    document.getElementById("footerName").textContent = S.name;
-    document.getElementById("footerDescription").textContent = S.footer.description;
-    var footerConnect = document.getElementById("footerConnect");
-    [
-      { label: "Email", href: "mailto:" + S.contact.email },
-      { label: "GitHub", href: S.contact.github },
-      { label: "LinkedIn", href: S.contact.linkedin }
-    ].forEach(function (item) {
-      var li = el("li");
-      li.appendChild(el("a", { text: item.label, attrs: { href: item.href, target: item.href.indexOf("http") === 0 ? "_blank" : "_self", rel: "noopener" } }));
-      footerConnect.appendChild(li);
-    });
-    document.getElementById("footerBottom").textContent = "© " + new Date().getFullYear() + " " + S.name + ". All rights reserved.";
-
     // --- Mobile nav toggle ---
     var toggle = document.getElementById("navToggle");
     toggle.addEventListener("click", function () {
@@ -1311,10 +1204,8 @@
 
     // --- Active section highlighting via IntersectionObserver ---
     var navLinks = Array.prototype.slice.call(navEl.querySelectorAll("a"));
-    var sections = S.nav
-      .map(function (item) { return document.querySelector(item.href); })
-      .filter(Boolean);
-    sections.push(document.getElementById("top"));
+    var sectionIds = ["top", "about", "experience", "projects", "skills", "contact"];
+    var sections = sectionIds.map(function (id) { return document.getElementById(id); }).filter(Boolean);
 
     if ("IntersectionObserver" in window && sections.length) {
       var observer = new IntersectionObserver(function (entries) {
@@ -1331,20 +1222,25 @@
       sections.forEach(function (section) { observer.observe(section); });
     }
 
-    // --- Fade-in on scroll ---
+    // --- Fade-in on scroll: JS adds the hidden starting state itself, so
+    //     content already in the HTML is never hidden if this never runs. ---
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var fadeEls = document.querySelectorAll(".fade-in");
-    if ("IntersectionObserver" in window && fadeEls.length) {
+    if (!reduceMotion && "IntersectionObserver" in window && fadeEls.length) {
+      fadeEls.forEach(function (elm) {
+        elm.style.opacity = "0";
+        elm.style.transform = "translateY(16px)";
+      });
       var fadeObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
+            entry.target.style.opacity = "";
+            entry.target.style.transform = "";
             fadeObserver.unobserve(entry.target);
           }
         });
       }, { threshold: 0.1 });
       fadeEls.forEach(function (elm) { fadeObserver.observe(elm); });
-    } else {
-      fadeEls.forEach(function (elm) { elm.classList.add("is-visible"); });
     }
   })();
 </script>
